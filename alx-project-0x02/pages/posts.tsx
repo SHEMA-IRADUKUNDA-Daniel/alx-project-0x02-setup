@@ -5,9 +5,7 @@ import PostCard from "@/components/common/PostCard";
 import { type PostProps } from "@/interfaces";
 import React from "react";
 
-interface PostsPageProps {
-  posts: PostProps[];
-}
+import { type PostsPageProps } from "@/interfaces";
 
 const PostsPage: React.FC<PostsPageProps> = ({ posts }) => {
   return (

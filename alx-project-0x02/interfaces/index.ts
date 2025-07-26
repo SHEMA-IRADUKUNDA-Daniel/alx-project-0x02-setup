@@ -15,7 +15,7 @@ export interface PostProps {
   content: string;
   userId: number;
 }
-interface PostsPageProps {
+export interface PostsPageProps {
   posts: PostProps[];
 }
 
@@ -30,5 +30,12 @@ export interface UserProps {
   id: number;
   name: string;
   email: string;
-  address: Address;
+  address: {
+    street: string;
+    city: string;
+    zipcode: string;
+  };
+}
+export interface UsersPageProps {
+  users: UserProps[];
 }
