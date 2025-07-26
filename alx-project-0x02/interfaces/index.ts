@@ -15,6 +15,9 @@ export interface PostProps {
   content: string;
   userId: number;
 }
+interface PostsPageProps {
+  posts: PostProps[];
+}
 
 export interface Address {
   street: string;
