@@ -4,7 +4,7 @@ import { UserProps } from "@/interfaces";
 import Header from "@/components/layout/Header";
 import { UsersPageProps } from "@/interfaces";
 
-const UsersPage: React.FC<UsersPageProps> = ({ users }) => {
+const UsersPage = ({ users }: UsersPageProps) => {
   return (
     <div className="bg-white">
       <Header />
@@ -18,7 +18,7 @@ const UsersPage: React.FC<UsersPageProps> = ({ users }) => {
   );
 };
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
   const users = await res.json();
 
@@ -27,6 +27,6 @@ export const getStaticProps = async () => {
       users,
     },
   };
-};
+}
 
 export default UsersPage;
